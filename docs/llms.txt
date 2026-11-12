@@ -1,0 +1,22 @@
+# GhostShell
+
+> Two free, open-source desktop tools: one for Blu-ray and DVD discs you own,
+> one for managing an Xbox 360 game library over FTP.
+
+Site: https://ghostyshell.github.io/
+
+## Projects
+
+- Keepsake Atelier - https://ghostyshell.github.io/keepsake-atelier/ - rip, author,
+  verify and burn discs with native tooling; AACS key recovery, BD-J menus,
+  1:1 clones, MCP server. macOS, Linux, Windows.
+- GODsend 360 - https://ghostyshell.github.io/GODSend-360/ - Xbox 360 game manager
+  for Aurora: Minerva Archive and Internet Archive browsing, ISO to GOD conversion,
+  DLC, title updates and save backups over FTP. Windows, macOS, Linux.
+
+Both are MIT licensed, need no account, and have no subscription.
+
+## Feeds
+
+- Sitemap: https://ghostyshell.github.io/sitemap.xml
+- Robots: https://ghostyshell.github.io/robots.txt
