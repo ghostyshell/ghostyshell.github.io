@@ -7,4 +7,4 @@ IndexNow key file that Search Console and Bing need at the domain root.
 The two project pages live in their own repositories and are served under
 `/keepsake-atelier/` and `/GODSend-360/` by their own Pages deployments.
 
-Push to `main` publishes `docs/`.
+Pages publishes from the repository root, so the hub, robots, sitemap, llms.txt and the IndexNow key all live there.
