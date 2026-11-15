@@ -11,7 +11,7 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="GhostShell">
 <meta property="og:title" content="GhostShell - open-source tools for consoles and discs">
-<meta property="og:description" content="Eleven free, open-source projects for the hardware you own. No accounts, no subscriptions.">
+<meta property="og:description" content="Eleven free, open-source projects for the hardware you own.">
 <meta property="og:url" content="https://ghostyshell.github.io/">
 <meta property="og:image" content="https://ghostyshell.github.io/assets/avatar.png">
 <meta name="twitter:card" content="summary">
@@ -144,6 +144,9 @@
   .sectionhead { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; margin: 1rem 0 1.5rem; }
   .sectionhead ~ .sectionhead { margin-top: 3.75rem; }
   ul.grid.closing { margin-top: 2.75rem; }
+  @media (min-width: 48rem) {
+    ul.grid:not(.closing) > li:only-child { max-width: calc(50% - .55rem); }
+  }
   .sectionhead h2 { margin: 0; font-size: .78rem; font-family: var(--mono); font-weight: 500; letter-spacing: .2em; text-transform: uppercase; color: var(--muted); }
   .sectionhead span { font-family: var(--mono); font-size: .72rem; color: #6f7d95; }
 
@@ -220,6 +223,8 @@
     background: color-mix(in oklab, var(--accent) 18%, transparent);
     border-color: color-mix(in oklab, var(--accent) 45%, transparent); color: #fff;
   }
+  .actions a.icon { padding: .5rem; width: 2.3rem; height: 2.3rem; justify-content: center; color: #b6c4da; }
+  .actions a.icon svg { width: 17px; height: 17px; display: block; }
   .actions a:hover, .actions a:focus-visible {
     transform: translateY(-1px); outline: none; color: #fff;
     background: color-mix(in oklab, var(--accent) 28%, transparent);
@@ -233,6 +238,24 @@
     .card.wide .what { flex: 1 1 auto; margin: 0; max-width: 46rem; }
     .card.wide .actions { margin: 0 0 0 auto; padding: 0; flex: 0 0 auto; }
   }
+
+  ul.links { list-style: none; margin: 0; padding: 0; display: grid; gap: .8rem;
+              grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr)); }
+  ul.links a {
+    display: flex; flex-direction: column; gap: .15rem; height: 100%; padding: 1rem 1.1rem;
+    border-radius: 16px; border: 1px solid var(--line); text-decoration: none;
+    background: linear-gradient(158deg, rgba(255,255,255,.06), rgba(255,255,255,.02) 60%, rgba(255,255,255,.035));
+    -webkit-backdrop-filter: blur(14px) saturate(150%); backdrop-filter: blur(14px) saturate(150%);
+    box-shadow: 0 1px 0 rgba(255,255,255,.06) inset;
+    transition: transform .35s cubic-bezier(.2,.7,.2,1), border-color .35s, box-shadow .35s;
+  }
+  ul.links a:hover, ul.links a:focus-visible {
+    transform: translateY(-3px); outline: none; border-color: rgba(103,232,249,.45);
+    box-shadow: 0 18px 34px -26px rgba(103,232,249,.8), 0 1px 0 rgba(255,255,255,.12) inset;
+  }
+  .l-name { font-weight: 600; font-size: .95rem; letter-spacing: -.01em; }
+  .l-desc { color: #9aa8c2; font-size: .82rem; line-height: 1.45; }
+  .l-host { font-family: var(--mono); font-size: .68rem; letter-spacing: .05em; color: #6f7d95; margin-top: .4rem; }
 
   /* footer */
   footer.site { margin: 5rem 0 4rem; padding-top: 2rem; border-top: 1px solid var(--line);
@@ -289,7 +312,7 @@
 
 <div class="wrap">
   <header class="hero">
-    <p class="pill"><span class="dot" aria-hidden="true"></span>Eleven projects · free · no accounts</p>
+    <p class="pill"><span class="dot" aria-hidden="true"></span>Eleven projects · free · open source</p>
     <h1>Small tools for the <span class="grad">hardware you own</span>.</h1>
     <p class="lede">Six console managers, disc authoring, a decrypted disc image, a browser an agent can drive, live rooms recorded before they end. Every project here is open source, runs on your machine, and asks for nothing but your hardware.</p>
     <div class="cta">
@@ -441,8 +464,8 @@
     </ul>
 
     <div class="sectionhead">
-      <h2>Discs</h2>
-      <span>2 projects</span>
+      <h2>Blu-ray</h2>
+      <span>1 project</span>
     </div>
 
     <ul class="grid">
@@ -468,6 +491,14 @@
           </div>
         </article>
       </li>
+    </ul>
+
+    <div class="sectionhead">
+      <h2>PS3 tools</h2>
+      <span>1 project</span>
+    </div>
+
+    <ul class="grid">
       <li>
         <article class="card" style="--accent:#38bdf8">
           <div class="cardhead">
@@ -574,6 +605,63 @@
       </li>
     </ul>
 
+    <div class="sectionhead">
+      <h2>Elsewhere</h2>
+      <span>7 sites</span>
+    </div>
+
+    <ul class="links">
+      <li>
+        <a href="https://game-debrid.link">
+          <span class="l-name">Game Debrid</span>
+          <span class="l-desc">Browse and download games, then hand the link to your debrid provider.</span>
+          <span class="l-host">game-debrid.link</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://debrid.in">
+          <span class="l-name">Debrid.in</span>
+          <span class="l-desc">Your torrent library: search, favourites and debrid job health in one place.</span>
+          <span class="l-host">debrid.in</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://addon.debrid.in">
+          <span class="l-name">TPB addon</span>
+          <span class="l-desc">Stremio addon for 4K torrents, with a catalogue per studio and performer. 18+</span>
+          <span class="l-host">addon.debrid.in</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://cinema.debrid.in">
+          <span class="l-name">Absolute Cinema</span>
+          <span class="l-desc">Stremio addon for films and shows, with language preferences and guides.</span>
+          <span class="l-host">cinema.debrid.in</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://horror.debrid.in">
+          <span class="l-name">Horror</span>
+          <span class="l-desc">The Absolute Cinema stack, dedicated to horror.</span>
+          <span class="l-host">horror.debrid.in</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://encodes.debrid.in">
+          <span class="l-name">FK99 encodes</span>
+          <span class="l-desc">A wall of curated 4K encodes, ready to stream.</span>
+          <span class="l-host">encodes.debrid.in</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://ps3.game-debrid.link">
+          <span class="l-name">PS3 Backups</span>
+          <span class="l-desc">PS3 title IDs, updates, keys and disc downloads.</span>
+          <span class="l-host">ps3.game-debrid.link</span>
+        </a>
+      </li>
+    </ul>
+
     <ul class="grid closing">
       <li class="wide">
         <article class="card wide" style="--accent:#67e8f9">
@@ -584,9 +672,18 @@
               <p class="tags">ghostyshell · 11 repos · open source</p>
             </div>
           </div>
-          <p class="what">Every project here is public, with its source, issues and release builds. No telemetry, no account, nothing phoned home.</p>
+          <p class="what">Every project here is public, with its source, issues and release builds. No telemetry, nothing phoned home.</p>
           <div class="actions">
             <a class="primary" href="https://github.com/ghostyshell?tab=repositories">All repositories</a>
+            <a class="icon" href="https://discord.gg/Z9efYy2sJg" title="Discord" aria-label="Discord server">
+              <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M4 5.5h16v12H9.5L4 21z"/><path d="M9 11h.01M15 11h.01" stroke-linecap="round" stroke-width="2.2"/></svg>
+            </a>
+            <a class="icon" href="https://ko-fi.com/ghosty99" title="Ko-fi" aria-label="Ko-fi">
+              <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 8.5h11v6.5a4 4 0 0 1-4 4h-3a4 4 0 0 1-4-4z"/><path d="M15.5 10h2.25a2.25 2.25 0 0 1 0 4.5H15.5"/><path d="M3 21h14"/></svg>
+            </a>
+            <a class="icon" href="https://etherscan.io/address/0xbBef115aD853236a350EaF04777a2AdB2e7c0317" title="ETH 0xbBef115aD853236a350EaF04777a2AdB2e7c0317" aria-label="Ethereum address on Etherscan">
+              <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M12 3l6 9.2-6 3.4-6-3.4z"/><path d="M6 14.4l6 6.6 6-6.6"/></svg>
+            </a>
           </div>
         </article>
       </li>
@@ -594,7 +691,7 @@
   </main>
 
   <footer class="site">
-    <span>No accounts. No subscriptions. Source on <a href="https://github.com/ghostyshell">GitHub</a>.</span>
+    <span>Free and open source. Code on <a href="https://github.com/ghostyshell">GitHub</a>.</span>
     <span><a href="/sitemap.xml">Sitemap</a> · <a href="/llms.txt">llms.txt</a></span>
   </footer>
 </div>

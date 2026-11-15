@@ -10,6 +10,10 @@ The hub covers eleven projects in two groups: the six GODsend console managers
 has a Pages site of its own, served from its repository's `docs/` folder, and
 every repo carries that URL in its Website field.
 
+Below the project groups, an Elsewhere block links the hosted sites that are not
+GitHub repos (Game Debrid, Debrid.in, the TPB, Absolute Cinema and Horror addons,
+FK99 encodes and PS3 Backups).
+
 Project logos live in `assets/`, copied from each project's own icon. The
 site's own icon and social image are the GitHub profile avatar (`avatar.png`,
 plus `icon-32.png`, `icon-192.png` and `apple-touch-icon.png` generated from it).
