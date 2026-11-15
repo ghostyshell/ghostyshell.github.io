@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="Absolute Cinema">
+  <defs>
+    <linearGradient id="gold" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffe7ae"/>
+      <stop offset=".3" stop-color="#f9b94f"/>
+      <stop offset=".62" stop-color="#f49a24"/>
+      <stop offset="1" stop-color="#c8760f"/>
+    </linearGradient>
+    <filter id="bloom" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="9" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <g fill="url(#gold)" filter="url(#bloom)">
+    <path d="M256 103 84 381q-18 28 12 28h50q11 0 16-11l94-278Z"/>
+    <path d="M256 103 428 381q18 28-12 28h-50q-11 0-16-11L256 120Z"/>
+    <path d="M200 354h112q7 0 9 7l13 27q3 7-5 7H182q-8 0-5-7l13-27q1-7 10-7Z"/>
+  </g>
+</svg>
