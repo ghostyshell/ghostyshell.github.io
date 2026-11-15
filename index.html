@@ -447,16 +447,16 @@
           <div class="cardhead">
             <span class="tile"><img src="/assets/stripchat-record.svg" width="38" height="38" alt=""></span>
             <div>
-              <h3>stripchat-record</h3>
-              <p class="tags">Python · 18+</p>
+              <h3>Stripchat Recorder</h3>
+              <p class="tags">Rust · Tauri 2 · MIT · 18+</p>
             </div>
           </div>
-          <p class="what">A headless recorder for Stripchat live streams, pinned to source resolution over WebRTC.</p>
+          <p class="what">A desktop recorder for Stripchat live rooms, pulled straight from the CDN at source quality.</p>
           <ul class="feat">
-            <li>Connects to the WebRTC edge directly and asks for the source quality</li>
-            <li>Stream only: no chat, sidebar or page UI in the file</li>
-            <li>Stops when the model goes offline, or after an optional duration</li>
-            <li>Splits into parts and remuxes each to MP4 with ffmpeg</li>
+            <li>Reads the site's HLS playlist directly, no browser and no screen capture</li>
+            <li>Decodes the MOUFLON v2 segment obfuscation in-app</li>
+            <li>Append-only recording: a dropped connection cannot corrupt the file</li>
+            <li>Splits into parts, then remuxes or compresses with CRF presets</li>
           </ul>
           <div class="actions">
             <a class="primary" href="/stripchat-record/">Website</a>
@@ -464,6 +464,7 @@
           </div>
         </article>
       </li>
+
 
       <li class="wide">
         <article class="card wide" style="--accent:#67e8f9">
