@@ -30,4 +30,22 @@
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
+  <url>
+    <loc>https://ghostyshell.github.io/browser-bridge/</loc>
+    <lastmod>2026-11-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://ghostyshell.github.io/ps3-qdd-mac/</loc>
+    <lastmod>2026-11-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://ghostyshell.github.io/stripchat-record/</loc>
+    <lastmod>2026-11-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
 </urlset>
