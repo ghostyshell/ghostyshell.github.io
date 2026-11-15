@@ -1,6 +1,6 @@
 # GhostShell
 
-> Ten free, open-source projects for hardware you own: console managers for
+> Eleven free, open-source projects for hardware you own: console managers for
 > Xbox 360, PlayStation 3, 4 and 5, PSP and Switch, Blu-ray and DVD authoring,
 > PS3 disc decryption, a local browser bridge for CLI agents, and a live
 > stream recorder.
@@ -44,6 +44,9 @@ Site: https://ghostyshell.github.io/
   recorder for Stripchat live rooms: reads the HLS playlist directly, decodes the
   segment obfuscation in-app, appends so a drop cannot corrupt the file. Rust and
   Tauri 2. MIT. 18+.
+- Chaturbate Recorder - https://ghostyshell.github.io/chaturbate-record/ - the same
+  recorder for Chaturbate: separate video and audio chunklists muxed into one MP4,
+  session re-minting mid-recording, append-only writes. Rust and Tauri 2. MIT. 18+.
 
 All projects are free, need no account, and have no subscription.
 
