@@ -22,13 +22,13 @@ Site: https://ghostyshell.github.io/
   PlayStation 3 over FTP: library with cover art, virtual DualShock pad, game and
   homebrew downloads, ISO and split conversions, loopback MCP server.
   Windows, macOS, Linux. MIT.
-- Browser Bridge - https://github.com/ghostyshell/browser-bridge - drives your real
+- Browser Bridge - https://ghostyshell.github.io/browser-bridge/ - drives your real
   Chromium profile from any CLI agent through an extension and a loopback daemon.
   TypeScript. MIT.
-- PS3 Quick Disc Decryptor - https://github.com/ghostyshell/ps3-qdd-mac - native
+- PS3 Quick Disc Decryptor - https://ghostyshell.github.io/ps3-qdd-mac/ - native
   macOS app that decrypts Redump PS3 images for RPCS3, no dependencies.
   Swift. GPL-3.0.
-- stripchat-record - https://github.com/ghostyshell/stripchat-record - headless
+- stripchat-record - https://ghostyshell.github.io/stripchat-record/ - headless
   WebRTC recorder for Stripchat live streams at source resolution. Python. 18+.
 
 All projects are free, need no account, and have no subscription.

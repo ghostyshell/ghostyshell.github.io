@@ -5,10 +5,10 @@ repository with its features and its website, plus the host-root `robots.txt`,
 `sitemap.xml`, `llms.txt` and the IndexNow key file that Search Console and Bing
 need at the domain root.
 
-The hub covers seven projects. Four have their own Pages sites served under
-`/keepsake-atelier/`, `/GODSend-360/`, `/godsend-psp/` and `/godsend-ps3/` from
-their own repositories. `browser-bridge`, `ps3-qdd-mac` and `stripchat-record`
-have no site yet and link straight to GitHub.
+The hub covers seven projects, and every one has a Pages site of its own, served
+from its repository's `docs/` folder: `/keepsake-atelier/`, `/GODSend-360/`,
+`/godsend-psp/`, `/godsend-ps3/`, `/browser-bridge/`, `/ps3-qdd-mac/` and
+`/stripchat-record/`.
 
 Project logos live in `assets/`, copied from each project's own icon. The
 site's own icon and social image are the GitHub profile avatar (`avatar.png`,
