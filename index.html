@@ -239,30 +239,19 @@
     .card.wide .actions { margin: 0 0 0 auto; padding: 0; flex: 0 0 auto; }
   }
 
-  ul.links { list-style: none; margin: 0; padding: 0; display: grid; gap: .8rem;
-              grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr)); }
-  ul.links a {
-    display: flex; flex-direction: column; gap: .15rem; height: 100%; padding: 1rem 1.1rem;
-    border-radius: 16px; border: 1px solid var(--line); text-decoration: none;
-    background: linear-gradient(158deg, rgba(255,255,255,.06), rgba(255,255,255,.02) 60%, rgba(255,255,255,.035));
-    -webkit-backdrop-filter: blur(14px) saturate(150%); backdrop-filter: blur(14px) saturate(150%);
-    box-shadow: 0 1px 0 rgba(255,255,255,.06) inset;
-    transition: transform .35s cubic-bezier(.2,.7,.2,1), border-color .35s, box-shadow .35s;
-  }
-  ul.links a:hover, ul.links a:focus-visible {
-    transform: translateY(-3px); outline: none; border-color: rgba(103,232,249,.45);
-    box-shadow: 0 18px 34px -26px rgba(103,232,249,.8), 0 1px 0 rgba(255,255,255,.12) inset;
-  }
-  .l-name { font-weight: 600; font-size: .95rem; letter-spacing: -.01em; }
-  .l-desc { color: #9aa8c2; font-size: .82rem; line-height: 1.45; }
-  .l-host { font-family: var(--mono); font-size: .68rem; letter-spacing: .05em; color: #6f7d95; margin-top: .4rem; }
-
   /* footer */
   footer.site { margin: 5rem 0 4rem; padding-top: 2rem; border-top: 1px solid var(--line);
                 display: flex; flex-wrap: wrap; gap: 1rem; justify-content: space-between;
                 font-family: var(--mono); font-size: .74rem; letter-spacing: .04em; color: #7d8aa1; }
   footer.site a { color: #a9b8ce; text-decoration: none; border-bottom: 1px solid transparent; }
   footer.site a:hover, footer.site a:focus-visible { color: #fff; border-bottom-color: currentColor; outline: none; }
+  .socials { display: flex; align-items: center; gap: .5rem; }
+  .socials a { display: inline-flex; align-items: center; justify-content: center; width: 2.1rem; height: 2.1rem;
+               border-radius: 999px; border: 1px solid var(--line); color: #b6c4da; border-bottom: 1px solid var(--line);
+               transition: color .25s, border-color .25s, background .25s, transform .25s; }
+  .socials a svg { width: 16px; height: 16px; display: block; }
+  .socials a:hover, .socials a:focus-visible { color: #fff; transform: translateY(-1px); outline: none;
+               border-color: rgba(103,232,249,.5); background: rgba(103,232,249,.12); }
 
   /* motion */
   @supports (animation-timeline: view()) {
@@ -312,16 +301,164 @@
 
 <div class="wrap">
   <header class="hero">
-    <p class="pill"><span class="dot" aria-hidden="true"></span>Eleven projects · free · open source</p>
+    <p class="pill"><span class="dot" aria-hidden="true"></span>11 projects · 7 live sites</p>
     <h1>Small tools for the <span class="grad">hardware you own</span>.</h1>
     <p class="lede">Six console managers, disc authoring, a decrypted disc image, a browser an agent can drive, live rooms recorded before they end. Every project here is open source, runs on your machine, and asks for nothing but your hardware.</p>
     <div class="cta">
-      <a class="btn solid" href="#projects">Browse the projects</a>
+      <a class="btn solid" href="#projects">Browse everything</a>
       <a class="btn" href="https://github.com/ghostyshell">GitHub</a>
     </div>
   </header>
 
   <main id="projects">
+    <div class="sectionhead">
+      <h2>Elsewhere · live sites</h2>
+      <span>7 sites</span>
+    </div>
+
+    <ul class="grid">
+      <li>
+        <article class="card" style="--accent:#22d3ee">
+          <div class="cardhead">
+            <span class="tile"><img src="/assets/site-game-debrid.svg" width="38" height="38" alt=""></span>
+            <div>
+              <h3>Game Debrid</h3>
+              <p class="tags">game-debrid.link · games</p>
+            </div>
+          </div>
+          <p class="what">Download links for games on PS5, PS4, PS3, PS2, PS Vita, PSP, Switch, Xbox 360 and PC, enriched with RAWG metadata and played back through Real-Debrid or TorBox.</p>
+          <ul class="feat">
+            <li>Nine platforms behind one search box</li>
+            <li>Cover art and metadata filled from keyless sources</li>
+            <li>Hands the magnet to your own debrid account, so the file never sits with us</li>
+          </ul>
+          <div class="actions">
+            <a class="primary" href="https://game-debrid.link" rel="noopener">Visit site</a>
+          </div>
+        </article>
+      </li>
+      <li>
+        <article class="card" style="--accent:#60a5fa">
+          <div class="cardhead">
+            <span class="tile"><img src="/assets/site-debrid.png" width="38" height="38" alt=""></span>
+            <div>
+              <h3>Debrid.in</h3>
+              <p class="tags">debrid.in · torrents</p>
+            </div>
+          </div>
+          <p class="what">Search the indexers and stream what they find through your debrid provider: browse, search and play in one place, signed in with Stremio.</p>
+          <ul class="feat">
+            <li>Favourites that follow you into the TPB addon</li>
+            <li>Debrid job health for every refresh, on one card</li>
+            <li>Same catalogue, one account, wherever you open it</li>
+          </ul>
+          <div class="actions">
+            <a class="primary" href="https://debrid.in" rel="noopener">Visit site</a>
+          </div>
+        </article>
+      </li>
+      <li>
+        <article class="card" style="--accent:#f472b6">
+          <div class="cardhead">
+            <span class="tile"><img src="/assets/site-tpb.svg" width="38" height="38" alt=""></span>
+            <div>
+              <h3>TPB addon</h3>
+              <p class="tags">addon.debrid.in · 18+</p>
+            </div>
+          </div>
+          <p class="what">The Stremio and Nuvio addon for 4K torrents. Pick 4K, HD, VR, JAV, Hentai, Gay, Trans and Indian catalogues, connect a debrid provider and install it in a click.</p>
+          <ul class="feat">
+            <li>Catalogues per studio and performer, not one flat list</li>
+            <li>Debrid routing so playback starts from your account</li>
+            <li>Configure page translated into every language the addon speaks</li>
+          </ul>
+          <div class="actions">
+            <a class="primary" href="https://addon.debrid.in" rel="noopener">Visit site</a>
+          </div>
+        </article>
+      </li>
+      <li>
+        <article class="card" style="--accent:#a78bfa">
+          <div class="cardhead">
+            <span class="tile"><img src="/assets/site-cinema.svg" width="38" height="38" alt=""></span>
+            <div>
+              <h3>Absolute Cinema</h3>
+              <p class="tags">cinema.debrid.in · films</p>
+            </div>
+          </div>
+          <p class="what">A Stremio addon for films and shows: stream rules, picture and sound filters, 3D and regional catalogues, subtitles, debrid services and an in-browser player.</p>
+          <ul class="feat">
+            <li>Audio languages are a preference, not a hard filter</li>
+            <li>A short video and steps for every feature on the guides page</li>
+            <li>Trakt support, with results written back to your account</li>
+          </ul>
+          <div class="actions">
+            <a class="primary" href="https://cinema.debrid.in" rel="noopener">Visit site</a>
+          </div>
+        </article>
+      </li>
+      <li>
+        <article class="card" style="--accent:#f87171">
+          <div class="cardhead">
+            <span class="tile"><img src="/assets/site-horror.png" width="38" height="38" alt=""></span>
+            <div>
+              <h3>Horror</h3>
+              <p class="tags">horror.debrid.in · films</p>
+            </div>
+          </div>
+          <p class="what">Build your own horror catalogue for Stremio: subgenres, decades, franchises and streaming services, with catalogues that update themselves.</p>
+          <ul class="feat">
+            <li>Subgenre, decade and franchise axes you combine</li>
+            <li>The Absolute Cinema stack, tuned for horror</li>
+            <li>Guides page with a recording per feature</li>
+          </ul>
+          <div class="actions">
+            <a class="primary" href="https://horror.debrid.in" rel="noopener">Visit site</a>
+          </div>
+        </article>
+      </li>
+      <li>
+        <article class="card" style="--accent:#fbbf24">
+          <div class="cardhead">
+            <span class="tile"><img src="/assets/site-encodes.png" width="38" height="38" alt=""></span>
+            <div>
+              <h3>FK99 encodes</h3>
+              <p class="tags">encodes.debrid.in · 4K</p>
+            </div>
+          </div>
+          <p class="what">The curated 4K encode wall from the Debrid.in catalogue: every release encoded, checked and ready to stream through your provider.</p>
+          <ul class="feat">
+            <li>Curated rather than scraped: only checked encodes</li>
+            <li>Browsable as a wall, playable like any other title</li>
+            <li>Runs on the same Debrid.in account and player</li>
+          </ul>
+          <div class="actions">
+            <a class="primary" href="https://encodes.debrid.in" rel="noopener">Visit site</a>
+          </div>
+        </article>
+      </li>
+      <li>
+        <article class="card" style="--accent:#34d399">
+          <div class="cardhead">
+            <span class="tile"><img src="/assets/site-ps3.svg" width="38" height="38" alt=""></span>
+            <div>
+              <h3>PS3 Backups</h3>
+              <p class="tags">ps3.game-debrid.link · PS3</p>
+            </div>
+          </div>
+          <p class="what">Search PS3 title IDs, game updates, the IRD and codelist databases and PS1 and PS2 compatibility config, and browse multiMAN themes, covers and CFW patches.</p>
+          <ul class="feat">
+            <li>Title IDs, updates and IRD keys in one lookup</li>
+            <li>PS1 and PS2 compatibility config per title</li>
+            <li>Themes, covers and CFW patches beside the databases</li>
+          </ul>
+          <div class="actions">
+            <a class="primary" href="https://ps3.game-debrid.link" rel="noopener">Visit site</a>
+          </div>
+        </article>
+      </li>
+    </ul>
+
 
     <div class="sectionhead">
       <h2>GODsend · console managers</h2>
@@ -605,93 +742,21 @@
       </li>
     </ul>
 
-    <div class="sectionhead">
-      <h2>Elsewhere</h2>
-      <span>7 sites</span>
-    </div>
-
-    <ul class="links">
-      <li>
-        <a href="https://game-debrid.link">
-          <span class="l-name">Game Debrid</span>
-          <span class="l-desc">Browse and download games, then hand the link to your debrid provider.</span>
-          <span class="l-host">game-debrid.link</span>
-        </a>
-      </li>
-      <li>
-        <a href="https://debrid.in">
-          <span class="l-name">Debrid.in</span>
-          <span class="l-desc">Your torrent library: search, favourites and debrid job health in one place.</span>
-          <span class="l-host">debrid.in</span>
-        </a>
-      </li>
-      <li>
-        <a href="https://addon.debrid.in">
-          <span class="l-name">TPB addon</span>
-          <span class="l-desc">Stremio addon for 4K torrents, with a catalogue per studio and performer. 18+</span>
-          <span class="l-host">addon.debrid.in</span>
-        </a>
-      </li>
-      <li>
-        <a href="https://cinema.debrid.in">
-          <span class="l-name">Absolute Cinema</span>
-          <span class="l-desc">Stremio addon for films and shows, with language preferences and guides.</span>
-          <span class="l-host">cinema.debrid.in</span>
-        </a>
-      </li>
-      <li>
-        <a href="https://horror.debrid.in">
-          <span class="l-name">Horror</span>
-          <span class="l-desc">The Absolute Cinema stack, dedicated to horror.</span>
-          <span class="l-host">horror.debrid.in</span>
-        </a>
-      </li>
-      <li>
-        <a href="https://encodes.debrid.in">
-          <span class="l-name">FK99 encodes</span>
-          <span class="l-desc">A wall of curated 4K encodes, ready to stream.</span>
-          <span class="l-host">encodes.debrid.in</span>
-        </a>
-      </li>
-      <li>
-        <a href="https://ps3.game-debrid.link">
-          <span class="l-name">PS3 Backups</span>
-          <span class="l-desc">PS3 title IDs, updates, keys and disc downloads.</span>
-          <span class="l-host">ps3.game-debrid.link</span>
-        </a>
-      </li>
-    </ul>
-
-    <ul class="grid closing">
-      <li class="wide">
-        <article class="card wide" style="--accent:#67e8f9">
-          <div class="cardhead">
-            <span class="tile"><img src="/assets/avatar.png" width="38" height="38" alt=""></span>
-            <div>
-              <h3>Everything is on GitHub</h3>
-              <p class="tags">ghostyshell · 11 repos · open source</p>
-            </div>
-          </div>
-          <p class="what">Every project here is public, with its source, issues and release builds. No telemetry, nothing phoned home.</p>
-          <div class="actions">
-            <a class="primary" href="https://github.com/ghostyshell?tab=repositories">All repositories</a>
-            <a class="icon" href="https://discord.gg/Z9efYy2sJg" title="Discord" aria-label="Discord server">
-              <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M4 5.5h16v12H9.5L4 21z"/><path d="M9 11h.01M15 11h.01" stroke-linecap="round" stroke-width="2.2"/></svg>
-            </a>
-            <a class="icon" href="https://ko-fi.com/ghosty99" title="Ko-fi" aria-label="Ko-fi">
-              <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 8.5h11v6.5a4 4 0 0 1-4 4h-3a4 4 0 0 1-4-4z"/><path d="M15.5 10h2.25a2.25 2.25 0 0 1 0 4.5H15.5"/><path d="M3 21h14"/></svg>
-            </a>
-            <a class="icon" href="https://etherscan.io/address/0xbBef115aD853236a350EaF04777a2AdB2e7c0317" title="ETH 0xbBef115aD853236a350EaF04777a2AdB2e7c0317" aria-label="Ethereum address on Etherscan">
-              <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M12 3l6 9.2-6 3.4-6-3.4z"/><path d="M6 14.4l6 6.6 6-6.6"/></svg>
-            </a>
-          </div>
-        </article>
-      </li>
-    </ul>
   </main>
 
   <footer class="site">
     <span>Free and open source. Code on <a href="https://github.com/ghostyshell">GitHub</a>.</span>
+    <span class="socials">
+      <a href="https://discord.gg/Z9efYy2sJg" title="Discord" aria-label="Discord server">
+        <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M4 5.5h16v12H9.5L4 21z"/><path d="M9 11h.01M15 11h.01" stroke-linecap="round" stroke-width="2.2"/></svg>
+      </a>
+      <a href="https://ko-fi.com/ghosty99" title="Ko-fi" aria-label="Ko-fi">
+        <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 8.5h11v6.5a4 4 0 0 1-4 4h-3a4 4 0 0 1-4-4z"/><path d="M15.5 10h2.25a2.25 2.25 0 0 1 0 4.5H15.5"/><path d="M3 21h14"/></svg>
+      </a>
+      <a href="https://etherscan.io/address/0xbBef115aD853236a350EaF04777a2AdB2e7c0317" title="ETH 0xbBef115aD853236a350EaF04777a2AdB2e7c0317" aria-label="Ethereum address on Etherscan">
+        <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M12 3l6 9.2-6 3.4-6-3.4z"/><path d="M6 14.4l6 6.6 6-6.6"/></svg>
+      </a>
+    </span>
     <span><a href="/sitemap.xml">Sitemap</a> · <a href="/llms.txt">llms.txt</a></span>
   </footer>
 </div>

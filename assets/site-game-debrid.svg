@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="Game Debrid">
+  <title>Game Debrid</title>
+  <defs>
+    <clipPath id="tile"><rect width="512" height="512" rx="58"/></clipPath>
+    <linearGradient id="violet" gradientUnits="userSpaceOnUse" x1="0" y1="-333" x2="0" y2="333">
+      <stop offset="0" stop-color="#D2A8FF"/>
+      <stop offset=".5" stop-color="#A374FB"/>
+      <stop offset="1" stop-color="#7B42E4"/>
+    </linearGradient>
+    <filter id="bloom" x="-25%" y="-25%" width="150%" height="150%">
+      <feGaussianBlur stdDeviation="16"/>
+    </filter>
+    <!-- Outer circle clips the bar; the black wedge is the G's mouth. -->
+    <mask id="mouth" maskUnits="userSpaceOnUse" x="-640" y="-640" width="1280" height="1280">
+      <circle r="624" fill="#fff"/>
+      <path d="M315 -140 390 -205 546 -307 700 -450 700 -140Z" fill="#000"/>
+    </mask>
+    <!-- Ring (a stroked circle: 248 thick, mid-radius 500), crossbar, play glyph. -->
+    <g id="mark" fill="url(#violet)" mask="url(#mouth)">
+      <circle r="500" fill="none" stroke="url(#violet)" stroke-width="248"/>
+      <path d="M195 -140H700V140H195L270 0Z"/>
+      <path d="M-161 -306 227 0-161 306Z"/>
+    </g>
+  </defs>
+  <g clip-path="url(#tile)">
+    <rect width="512" height="512" fill="#0B0715"/>
+    <g transform="translate(256 256) scale(.3413333)">
+      <use href="#mark" filter="url(#bloom)" opacity=".55"/>
+      <use href="#mark"/>
+    </g>
+  </g>
+</svg>
