@@ -1,20 +1,33 @@
 # GhostShell
 
-> Two free, open-source desktop tools: one for Blu-ray and DVD discs you own,
-> one for managing an Xbox 360 game library over FTP.
+> Six free, open-source projects for hardware you own: Blu-ray and DVD
+> authoring, Xbox 360 and PSP game management, PS3 disc decryption, a local
+> browser bridge for CLI agents, and a live stream recorder.
 
 Site: https://ghostyshell.github.io/
 
 ## Projects
 
 - Keepsake Atelier - https://ghostyshell.github.io/keepsake-atelier/ - rip, author,
-  verify and burn discs with native tooling; AACS key recovery, BD-J menus,
-  1:1 clones, MCP server. macOS, Linux, Windows.
+  verify and burn discs with native tooling; AACS key recovery, UDF 2.50 images,
+  BD-J menus, 1:1 clones, MCP server. macOS, Linux, Windows. MIT.
 - GODsend 360 - https://ghostyshell.github.io/GODSend-360/ - Xbox 360 game manager
-  for Aurora: Minerva Archive and Internet Archive browsing, ISO to GOD conversion,
-  DLC, title updates and save backups over FTP. Windows, macOS, Linux.
+  for Aurora: Minerva Archive and Internet Archive browsing, pure-Go ISO to GOD,
+  DLC, title updates, save backups and an RXEA asset editor over FTP.
+  Windows, macOS, Linux. MIT.
+- GODsend PSP - https://ghostyshell.github.io/godsend-psp/ - PSP memory stick manager
+  over USB: game and homebrew library with cover art, ffmpeg media conversion,
+  ISO and CSO images, saves and mods. Windows, macOS, Linux. MIT.
+- Browser Bridge - https://github.com/ghostyshell/browser-bridge - drives your real
+  Chromium profile from any CLI agent through an extension and a loopback daemon.
+  TypeScript. MIT.
+- PS3 Quick Disc Decryptor - https://github.com/ghostyshell/ps3-qdd-mac - native
+  macOS app that decrypts Redump PS3 images for RPCS3, no dependencies.
+  Swift. GPL-3.0.
+- stripchat-record - https://github.com/ghostyshell/stripchat-record - headless
+  WebRTC recorder for Stripchat live streams at source resolution. Python. 18+.
 
-Both are MIT licensed, need no account, and have no subscription.
+All projects are free, need no account, and have no subscription.
 
 ## Feeds
 

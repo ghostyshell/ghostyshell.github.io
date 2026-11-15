@@ -1,10 +1,16 @@
 # ghostyshell.github.io
 
-Root Pages site for the GhostShell projects: a hub linking Keepsake Atelier and
-GODsend 360, plus the host-root `robots.txt`, `sitemap.xml`, `llms.txt` and the
-IndexNow key file that Search Console and Bing need at the domain root.
+Root Pages site for the GhostShell projects: a hub that lists every open-source
+repository with its features and its website, plus the host-root `robots.txt`,
+`sitemap.xml`, `llms.txt` and the IndexNow key file that Search Console and Bing
+need at the domain root.
 
-The two project pages live in their own repositories and are served under
-`/keepsake-atelier/` and `/GODSend-360/` by their own Pages deployments.
+The hub covers six projects. Three have their own Pages sites served under
+`/keepsake-atelier/`, `/GODSend-360/` and `/godsend-psp/` from their own
+repositories. `browser-bridge`, `ps3-qdd-mac` and `stripchat-record` have no site
+yet and link straight to GitHub.
 
 Pages publishes from the repository root, so the hub, robots, sitemap, llms.txt and the IndexNow key all live there.
+
+To add a project, edit `index.html` (one `<li>` card), `llms.txt` and
+`sitemap.xml` if it has a site of its own.
