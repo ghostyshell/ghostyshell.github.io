@@ -1,8 +1,8 @@
 # GhostShell
 
-> Six free, open-source projects for hardware you own: Blu-ray and DVD
-> authoring, Xbox 360 and PSP game management, PS3 disc decryption, a local
-> browser bridge for CLI agents, and a live stream recorder.
+> Seven free, open-source projects for hardware you own: Blu-ray and DVD
+> authoring, Xbox 360, PS3 and PSP game management, PS3 disc decryption, a
+> local browser bridge for CLI agents, and a live stream recorder.
 
 Site: https://ghostyshell.github.io/
 
@@ -18,6 +18,10 @@ Site: https://ghostyshell.github.io/
 - GODsend PSP - https://ghostyshell.github.io/godsend-psp/ - PSP memory stick manager
   over USB: game and homebrew library with cover art, ffmpeg media conversion,
   ISO and CSO images, saves and mods. Windows, macOS, Linux. MIT.
+- GODsend PS3 - https://ghostyshell.github.io/godsend-ps3/ - manage a CFW or HEN
+  PlayStation 3 over FTP: library with cover art, virtual DualShock pad, game and
+  homebrew downloads, ISO and split conversions, loopback MCP server.
+  Windows, macOS, Linux. MIT.
 - Browser Bridge - https://github.com/ghostyshell/browser-bridge - drives your real
   Chromium profile from any CLI agent through an extension and a loopback daemon.
   TypeScript. MIT.
