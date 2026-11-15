@@ -5,8 +5,8 @@ repository with its features and its website, plus the host-root `robots.txt`,
 `sitemap.xml`, `llms.txt` and the IndexNow key file that Search Console and Bing
 need at the domain root.
 
-The hub covers ten projects in two groups: the six GODsend console managers
-(Xbox 360, PS3, PS4, PS5, PSP, Switch) and four disc or desktop tools. Every one
+The hub covers eleven projects in two groups: the six GODsend console managers
+(Xbox 360, PS3, PS4, PS5, PSP, Switch) and five disc or desktop tools. Every one
 has a Pages site of its own, served from its repository's `docs/` folder, and
 every repo carries that URL in its Website field.
 
