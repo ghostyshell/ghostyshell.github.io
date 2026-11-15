@@ -46,9 +46,23 @@ Site: https://ghostyshell.github.io/
   Tauri 2. MIT. 18+.
 - Chaturbate Recorder - https://ghostyshell.github.io/chaturbate-record/ - the same
   recorder for Chaturbate: separate video and audio chunklists muxed into one MP4,
-  session re-minting mid-recording, append-only writes. Rust and Tauri 2. MIT. 18+.
+  session re-minting mid-recording, append-only writes. Rust and Tauri 2. 18+.
 
-All projects are free, need no account, and have no subscription.
+All projects are free and open source.
+
+## Groups
+
+- GODsend console managers: Xbox 360, PS3, PS4, PS5, PSP, Switch.
+- Blu-ray: Keepsake Atelier.
+- PS3 tools: PS3 Quick Disc Decryptor.
+- Agent tooling: Browser Bridge.
+- Recorders (18+): Stripchat Recorder, Chaturbate Recorder.
+
+## Elsewhere
+
+- Discord: https://discord.gg/Z9efYy2sJg
+- Ko-fi: https://ko-fi.com/ghosty99
+- ETH: https://etherscan.io/address/0xbBef115aD853236a350EaF04777a2AdB2e7c0317
 
 ## Feeds
 
