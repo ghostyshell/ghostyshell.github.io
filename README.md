@@ -5,10 +5,10 @@ repository with its features and its website, plus the host-root `robots.txt`,
 `sitemap.xml`, `llms.txt` and the IndexNow key file that Search Console and Bing
 need at the domain root.
 
-The hub covers seven projects, and every one has a Pages site of its own, served
-from its repository's `docs/` folder: `/keepsake-atelier/`, `/GODSend-360/`,
-`/godsend-psp/`, `/godsend-ps3/`, `/browser-bridge/`, `/ps3-qdd-mac/` and
-`/stripchat-record/`.
+The hub covers ten projects in two groups: the six GODsend console managers
+(Xbox 360, PS3, PS4, PS5, PSP, Switch) and four disc or desktop tools. Every one
+has a Pages site of its own, served from its repository's `docs/` folder, and
+every repo carries that URL in its Website field.
 
 Project logos live in `assets/`, copied from each project's own icon. The
 site's own icon and social image are the GitHub profile avatar (`avatar.png`,

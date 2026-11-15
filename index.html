@@ -4,14 +4,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>GhostShell - open-source tools for consoles and discs</title>
-<meta name="description" content="Six free, open-source projects by GhostShell: Blu-ray authoring, Xbox 360 and PSP game management, PS3 disc decryption, a browser bridge for CLI agents, and a live stream recorder.">
+<meta name="description" content="Ten free, open-source projects by GhostShell: console managers for Xbox 360, PS3, PS4, PS5, PSP and Switch, Blu-ray authoring, PS3 disc decryption, a browser bridge for CLI agents, and a live stream recorder.">
 <meta name="theme-color" content="#04060c">
 <link rel="canonical" href="https://ghostyshell.github.io/">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="GhostShell">
 <meta property="og:title" content="GhostShell - open-source tools for consoles and discs">
-<meta property="og:description" content="Seven free, open-source projects for the hardware you own. No accounts, no subscriptions.">
+<meta property="og:description" content="Ten free, open-source projects for the hardware you own. No accounts, no subscriptions.">
 <meta property="og:url" content="https://ghostyshell.github.io/">
 <meta property="og:image" content="https://ghostyshell.github.io/assets/avatar.png">
 <meta name="twitter:card" content="summary">
@@ -142,6 +142,8 @@
 
   /* section heading */
   .sectionhead { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; margin: 1rem 0 1.5rem; }
+  .sectionhead ~ .sectionhead { margin-top: 3.75rem; }
+  ul.grid.closing { margin-top: 2.75rem; }
   .sectionhead h2 { margin: 0; font-size: .78rem; font-family: var(--mono); font-weight: 500; letter-spacing: .2em; text-transform: uppercase; color: var(--muted); }
   .sectionhead span { font-family: var(--mono); font-size: .72rem; color: #6f7d95; }
 
@@ -287,9 +289,9 @@
 
 <div class="wrap">
   <header class="hero">
-    <p class="pill"><span class="dot" aria-hidden="true"></span>Seven projects · free · no accounts</p>
+    <p class="pill"><span class="dot" aria-hidden="true"></span>Ten projects · free · no accounts</p>
     <h1>Small tools for the <span class="grad">hardware you own</span>.</h1>
-    <p class="lede">Disc authoring, Xbox 360 and PS3 libraries over FTP, a decrypted disc image, a browser an agent can drive, a stream caught before it ends. Every project here is open source, runs on your machine, and asks for nothing but your hardware.</p>
+    <p class="lede">Six console managers, disc authoring, a decrypted disc image, a browser an agent can drive, a live room recorded before it ends. Every project here is open source, runs on your machine, and asks for nothing but your hardware.</p>
     <div class="cta">
       <a class="btn solid" href="#projects">Browse the projects</a>
       <a class="btn" href="https://github.com/ghostyshell">GitHub</a>
@@ -297,13 +299,153 @@
   </header>
 
   <main id="projects">
+
     <div class="sectionhead">
-      <h2>Projects</h2>
-      <span>7 open source</span>
+      <h2>GODsend · console managers</h2>
+      <span>6 apps</span>
     </div>
 
     <ul class="grid">
+      <li>
+        <article class="card" style="--accent:#2ef2a3">
+          <div class="cardhead">
+            <span class="tile"><img src="/assets/godsend-360.png" width="38" height="38" alt=""></span>
+            <div>
+              <h3>GODsend 360</h3>
+              <p class="tags">Go · MIT</p>
+            </div>
+          </div>
+          <p class="what">An Xbox 360 game manager for Aurora consoles: browse a library, convert it, and push it over FTP without a laptop relay.</p>
+          <ul class="feat">
+            <li>Minerva (BitTorrent) and Internet Archive sources, searched in app</li>
+            <li>Pure-Go ISO to GOD conversion, no Windows-only tooling</li>
+            <li>DLC, title updates, save backup and restore over FTP</li>
+            <li>RXEA asset editor for Aurora art and text</li>
+          </ul>
+          <div class="actions">
+            <a class="primary" href="/godsend-360/">Website</a>
+            <a href="https://github.com/ghostyshell/godsend-360">Source</a>
+          </div>
+        </article>
+      </li>
+      <li>
+        <article class="card" style="--accent:#8b8cff">
+          <div class="cardhead">
+            <span class="tile"><img src="/assets/godsend-ps3.png" width="38" height="38" alt=""></span>
+            <div>
+              <h3>GODsend PS3</h3>
+              <p class="tags">Rust · Tauri 2 · MIT</p>
+            </div>
+          </div>
+          <p class="what">A desktop workshop for a CFW or HEN PlayStation 3: read the library over FTP, drive the console, install games and homebrew back onto it.</p>
+          <ul class="feat">
+            <li>Library from PARAM.SFO over FTP, mounted or launched through webMAN</li>
+            <li>On-screen DualShock pad, keyboard mapping and text macros</li>
+            <li>Game folder, ISO and FAT32 split conversions, plus Redump decrypt</li>
+            <li>Loopback MCP server, so an agent drives the same paths as the UI</li>
+          </ul>
+          <div class="actions">
+            <a class="primary" href="/godsend-ps3/">Website</a>
+            <a href="https://github.com/ghostyshell/godsend-ps3">Source</a>
+          </div>
+        </article>
+      </li>
+      <li>
+        <article class="card" style="--accent:#5aa9e6">
+          <div class="cardhead">
+            <span class="tile"><img src="/assets/godsend-ps4.png" width="38" height="38" alt=""></span>
+            <div>
+              <h3>GODsend PS4</h3>
+              <p class="tags">Rust · Tauri 2 · MIT</p>
+            </div>
+          </div>
+          <p class="what">A desktop workshop for a jailbroken PS4 on GoldHEN: the installed library, packages pushed straight into its installer, and a DualShock 4 in the window.</p>
+          <ul class="feat">
+            <li>Library read from /user/appmeta, with patches and DLC filtered out</li>
+            <li>Packages served to GoldHEN&#x27;s installer over a one-shot HTTP listener, so a 40 GB file never lands on the drive twice</li>
+            <li>DualShock 4 over WebRTC, with keyboard mapping, combos and macros</li>
+            <li>PKG unpack, FAT32 split and merge, plus save backup and restore</li>
+          </ul>
+          <div class="actions">
+            <a class="primary" href="/godsend-ps4/">Website</a>
+            <a href="https://github.com/ghostyshell/godsend-ps4">Source</a>
+          </div>
+        </article>
+      </li>
+      <li>
+        <article class="card" style="--accent:#f472b6">
+          <div class="cardhead">
+            <span class="tile"><img src="/assets/godsend-ps5.png" width="38" height="38" alt=""></span>
+            <div>
+              <h3>GODsend PS5</h3>
+              <p class="tags">Rust · Tauri 2 · MIT</p>
+            </div>
+          </div>
+          <p class="what">A desktop workshop for a jailbroken PS5: FTP into the library, payloads to elfldr, a DualSense in the window, and downloads sent back to the console.</p>
+          <ul class="feat">
+            <li>FTP that falls back across ftpsrv (2121), etaHEN (1337) and 21, and names the port that answered</li>
+            <li>Library from /user/appmeta with cached icons, game images and folder dumps</li>
+            <li>DualSense over the Ghostpad payload at 60 Hz, plus combos and text macros</li>
+            <li>Payload catalogue fetched at runtime, and LAN discovery of consoles</li>
+          </ul>
+          <div class="actions">
+            <a class="primary" href="/godsend-ps5/">Website</a>
+            <a href="https://github.com/ghostyshell/godsend-ps5">Source</a>
+          </div>
+        </article>
+      </li>
+      <li>
+        <article class="card" style="--accent:#4dd0ff">
+          <div class="cardhead">
+            <span class="tile"><img src="/assets/godsend-psp.png" width="38" height="38" alt=""></span>
+            <div>
+              <h3>GODsend PSP</h3>
+              <p class="tags">Rust · Tauri 2 · MIT</p>
+            </div>
+          </div>
+          <p class="what">Plug a PSP in over USB and manage the whole memory stick from one window: games, homebrew, media, saves, mods.</p>
+          <ul class="feat">
+            <li>Library built from PARAM.SFO and PBP headers, with ICON0 cover art</li>
+            <li>Bundled homebrew catalogue with per-archive layout detection</li>
+            <li>Music and video converted to PSP formats with ffmpeg</li>
+            <li>ISO and CSO images, saves and mods, one short video per tab</li>
+          </ul>
+          <div class="actions">
+            <a class="primary" href="/godsend-psp/">Website</a>
+            <a href="https://github.com/ghostyshell/godsend-psp">Source</a>
+          </div>
+        </article>
+      </li>
+      <li>
+        <article class="card" style="--accent:#ffb020">
+          <div class="cardhead">
+            <span class="tile"><img src="/assets/godsend-switch.png" width="38" height="38" alt=""></span>
+            <div>
+              <h3>GODsend Switch</h3>
+              <p class="tags">Rust · Tauri 2 · MIT</p>
+            </div>
+          </div>
+          <p class="what">A desktop workshop for a homebrew Switch: MTP, Tinfoil and the LAN installer, a library with box art, and a sys-con pad.</p>
+          <ul class="feat">
+            <li>USB three ways: MTP (DBI, Sphaira), Tinfoil/Awoo installs, and the LAN installer on TCP 2000</li>
+            <li>Library from the MTP responder and SD card, with box art and NSP/XCI title ids</li>
+            <li>sys-con network controller over UDP, every button, both sticks, HOME and Capture</li>
+            <li>MCP server on 127.0.0.1:3939, and a CLI that speaks the same tools over stdio</li>
+          </ul>
+          <div class="actions">
+            <a class="primary" href="/godsend-switch/">Website</a>
+            <a href="https://github.com/ghostyshell/godsend-switch">Source</a>
+          </div>
+        </article>
+      </li>
+    </ul>
 
+    <div class="sectionhead">
+      <h2>Discs and tools</h2>
+      <span>4 projects</span>
+    </div>
+
+    <ul class="grid">
       <li>
         <article class="card" style="--accent:#f0b45f">
           <div class="cardhead">
@@ -326,99 +468,6 @@
           </div>
         </article>
       </li>
-
-      <li>
-        <article class="card" style="--accent:#2ef2a3">
-          <div class="cardhead">
-            <span class="tile"><img src="/assets/godsend-360.png" width="38" height="38" alt=""></span>
-            <div>
-              <h3>GODsend 360</h3>
-              <p class="tags">Go · MIT</p>
-            </div>
-          </div>
-          <p class="what">An Xbox 360 game manager for Aurora consoles: browse a library, convert it, and push it over FTP without a laptop relay.</p>
-          <ul class="feat">
-            <li>Minerva (BitTorrent) and Internet Archive sources, searched in app</li>
-            <li>Pure-Go ISO to GOD conversion, no Windows-only tooling</li>
-            <li>DLC, title updates, save backup and restore over FTP</li>
-            <li>RXEA asset editor for Aurora art and text</li>
-          </ul>
-          <div class="actions">
-            <a class="primary" href="/GODSend-360/">Website</a>
-            <a href="https://github.com/ghostyshell/GODSend-360">Source</a>
-          </div>
-        </article>
-      </li>
-
-      <li>
-        <article class="card" style="--accent:#7aa2ff">
-          <div class="cardhead">
-            <span class="tile"><img src="/assets/godsend-psp.png" width="38" height="38" alt=""></span>
-            <div>
-              <h3>GODsend PSP</h3>
-              <p class="tags">Rust · Tauri 2 · MIT</p>
-            </div>
-          </div>
-          <p class="what">Plug a PSP in over USB and manage the whole memory stick from one window: games, homebrew, media, saves, mods.</p>
-          <ul class="feat">
-            <li>Library built from PARAM.SFO and PBP headers, with ICON0 cover art</li>
-            <li>Bundled homebrew catalogue with per-archive layout detection</li>
-            <li>Music and video converted to PSP formats with ffmpeg</li>
-            <li>ISO and CSO images, saves and mods, one short video per tab</li>
-          </ul>
-          <div class="actions">
-            <a class="primary" href="/godsend-psp/">Website</a>
-            <a href="https://github.com/ghostyshell/godsend-psp">Source</a>
-          </div>
-        </article>
-      </li>
-
-      <li>
-        <article class="card" style="--accent:#5b8cff">
-          <div class="cardhead">
-            <span class="tile"><img src="/assets/godsend-ps3.png" width="38" height="38" alt=""></span>
-            <div>
-              <h3>GODsend PS3</h3>
-              <p class="tags">Rust · Tauri 2 · MIT</p>
-            </div>
-          </div>
-          <p class="what">A desktop workshop for a CFW or HEN PlayStation 3: read the library over FTP, drive the console, install games and homebrew back onto it.</p>
-          <ul class="feat">
-            <li>Library from PARAM.SFO over FTP, mounted or launched through webMAN</li>
-            <li>On-screen DualShock pad, keyboard mapping and text macros</li>
-            <li>Game folder, ISO and FAT32 split conversions, plus Redump decrypt</li>
-            <li>Loopback MCP server, so an agent drives the same paths as the UI</li>
-          </ul>
-          <div class="actions">
-            <a class="primary" href="/godsend-ps3/">Website</a>
-            <a href="https://github.com/ghostyshell/godsend-ps3">Source</a>
-          </div>
-        </article>
-      </li>
-
-      <li>
-        <article class="card" style="--accent:#a78bfa">
-          <div class="cardhead">
-            <span class="tile"><img src="/assets/browser-bridge.png" width="38" height="38" alt=""></span>
-            <div>
-              <h3>Browser Bridge</h3>
-              <p class="tags">TypeScript · MIT</p>
-            </div>
-          </div>
-          <p class="what">Let a terminal agent drive the Chrome you actually use, with your profile and your logins, from a command line.</p>
-          <ul class="feat">
-            <li>Runs as an extension inside your profile, where the DevTools port is refused</li>
-            <li>Only tabs the agent opened or adopted, in their own tab group</li>
-            <li>Numbered snapshots, click, type, scroll, wait, eval, screenshot</li>
-            <li>The daemon binds 127.0.0.1 only; nothing is exposed to the network</li>
-          </ul>
-          <div class="actions">
-            <a class="primary" href="/browser-bridge/">Website</a>
-            <a href="https://github.com/ghostyshell/browser-bridge">Source</a>
-          </div>
-        </article>
-      </li>
-
       <li>
         <article class="card" style="--accent:#38bdf8">
           <div class="cardhead">
@@ -441,7 +490,28 @@
           </div>
         </article>
       </li>
-
+      <li>
+        <article class="card" style="--accent:#a78bfa">
+          <div class="cardhead">
+            <span class="tile"><img src="/assets/browser-bridge.png" width="38" height="38" alt=""></span>
+            <div>
+              <h3>Browser Bridge</h3>
+              <p class="tags">TypeScript · MIT</p>
+            </div>
+          </div>
+          <p class="what">Let a terminal agent drive the Chrome you actually use, with your profile and your logins, from a command line.</p>
+          <ul class="feat">
+            <li>Runs as an extension inside your profile, where the DevTools port is refused</li>
+            <li>Only tabs the agent opened or adopted, in their own tab group</li>
+            <li>Numbered snapshots, click, type, scroll, wait, eval, screenshot</li>
+            <li>The daemon binds 127.0.0.1 only; nothing is exposed to the network</li>
+          </ul>
+          <div class="actions">
+            <a class="primary" href="/browser-bridge/">Website</a>
+            <a href="https://github.com/ghostyshell/browser-bridge">Source</a>
+          </div>
+        </article>
+      </li>
       <li>
         <article class="card" style="--accent:#fb7185">
           <div class="cardhead">
@@ -453,7 +523,7 @@
           </div>
           <p class="what">A desktop recorder for Stripchat live rooms, pulled straight from the CDN at source quality.</p>
           <ul class="feat">
-            <li>Reads the site's HLS playlist directly, no browser and no screen capture</li>
+            <li>Reads the site&#x27;s HLS playlist directly, no browser and no screen capture</li>
             <li>Decodes the MOUFLON v2 segment obfuscation in-app</li>
             <li>Append-only recording: a dropped connection cannot corrupt the file</li>
             <li>Splits into parts, then remuxes or compresses with CRF presets</li>
@@ -464,15 +534,16 @@
           </div>
         </article>
       </li>
+    </ul>
 
-
+    <ul class="grid closing">
       <li class="wide">
         <article class="card wide" style="--accent:#67e8f9">
           <div class="cardhead">
             <span class="tile"><img src="/assets/avatar.png" width="38" height="38" alt=""></span>
             <div>
               <h3>Everything is on GitHub</h3>
-              <p class="tags">ghostyshell · 7 repos · MIT and GPL-3.0</p>
+              <p class="tags">ghostyshell · 10 repos · MIT and GPL-3.0</p>
             </div>
           </div>
           <p class="what">Every project here is public, with its source, issues and release builds. One is GPL-3.0 and the rest are MIT. No telemetry, no account, nothing phoned home.</p>
@@ -481,7 +552,6 @@
           </div>
         </article>
       </li>
-
     </ul>
   </main>
 
