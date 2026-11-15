@@ -3,15 +3,15 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>GhostShell - small desktop tools for discs and Xbox 360</title>
-<meta name="description" content="GhostShell builds two small, free desktop tools: Keepsake Atelier for Blu-ray and DVD ripping, authoring and burning, and GODsend 360 for managing an Xbox 360 game library over FTP.">
+<title>GhostShell - open-source tools for consoles and discs</title>
+<meta name="description" content="Six free, open-source projects by GhostShell: Blu-ray authoring, Xbox 360 and PSP game management, PS3 disc decryption, a browser bridge for CLI agents, and a live stream recorder.">
 <meta name="theme-color" content="#070b13">
 <link rel="canonical" href="https://ghostyshell.github.io/">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="GhostShell">
-<meta property="og:title" content="GhostShell - small desktop tools for discs and Xbox 360">
-<meta property="og:description" content="Two free, open-source desktop tools: Blu-ray ripping and authoring, and Xbox 360 library management over FTP.">
+<meta property="og:title" content="GhostShell - open-source tools for consoles and discs">
+<meta property="og:description" content="Six free, open-source desktop and CLI projects. No accounts, no subscriptions.">
 <meta property="og:url" content="https://ghostyshell.github.io/">
 <meta property="og:image" content="https://ghostyshell.github.io/GODSend-360/site/og-image.jpg">
 <meta name="twitter:card" content="summary_large_image">
@@ -25,17 +25,23 @@
     font: 16px/1.6 ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
     -webkit-font-smoothing: antialiased;
   }
-  main { max-width: 62rem; margin: 0 auto; padding: 4.5rem 1.5rem 5rem; }
+  main { max-width: 72rem; margin: 0 auto; padding: 4.5rem 1.5rem 5rem; }
   h1 { font-size: clamp(2rem, 5vw, 3rem); line-height: 1.1; margin: 0 0 1rem; letter-spacing: -0.02em; }
   h1 span { color: #67e8f9; }
-  p.lede { font-size: 1.1rem; color: #9fb0c6; max-width: 44rem; margin: 0 0 3rem; }
-  ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr)); }
-  li { border: 1px solid #1b2433; border-radius: 14px; background: #0b1220; }
-  a.card { display: block; padding: 1.5rem; text-decoration: none; color: inherit; height: 100%; }
-  a.card:hover, a.card:focus-visible { border-radius: 14px; outline: 2px solid #67e8f9; outline-offset: 2px; }
-  h2 { font-size: 1.15rem; margin: 0 0 .5rem; color: #eaf2ff; }
-  .card p { margin: 0; color: #9fb0c6; font-size: .95rem; }
-  .tag { display: inline-block; margin-top: 1rem; font-size: .75rem; letter-spacing: .08em; text-transform: uppercase; color: #67e8f9; }
+  p.lede { font-size: 1.1rem; color: #9fb0c6; max-width: 48rem; margin: 0 0 3rem; }
+  ul.grid { list-style: none; padding: 0; margin: 0; display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(min(100%, 21rem), 1fr)); }
+  ul.grid > li { border: 1px solid #1b2433; border-radius: 14px; background: #0b1220; }
+  .card { padding-bottom: 1.5rem; height: 100%; display: flex; flex-direction: column; }
+  .card:focus-within { outline: 2px solid #67e8f9; outline-offset: 2px; border-radius: 14px; }
+  h2 { font-size: 1.15rem; margin: 1.5rem 1.5rem .5rem; color: #eaf2ff; }
+  .what { margin: 0 1.5rem 1rem; color: #9fb0c6; font-size: .95rem; }
+  ul.feat { margin: 0 1.5rem 1.25rem; padding: 0 0 0 1.1rem; color: #b9c6d8; font-size: .9rem; }
+  ul.feat li { margin-bottom: .35rem; }
+  .meta { margin: auto 1.5rem 0; font-size: .75rem; letter-spacing: .06em; text-transform: uppercase; color: #7d8ea6; }
+  .links { display: flex; gap: 1rem; margin: .75rem 1.5rem 0; font-size: .9rem; }
+  .links a { color: #67e8f9; text-decoration: none; border-bottom: 1px solid transparent; }
+  .links a:hover, .links a:focus-visible { border-bottom-color: #67e8f9; outline: none; }
+  .links a[href^="https://github.com"] { color: #9fb0c6; }
   footer { margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid #1b2433; color: #7d8ea6; font-size: .9rem; }
   footer a { color: #9fb0c6; }
 </style>
@@ -43,27 +49,102 @@
 <body>
 <main>
   <h1>Small tools, <span>no accounts</span>, no subscriptions.</h1>
-  <p class="lede">GhostShell is two open-source desktop apps for jobs the big software puts behind a licence: reading and authoring the discs you already own, and getting games onto an Xbox 360 without a laptop relay.</p>
+  <p class="lede">Six open-source projects for the hardware on your desk: authoring and ripping the discs you own, managing the game libraries on your consoles, decrypting what the emulator needs, giving a CLI agent your real browser, and recording a live stream before it ends. Every one is free, source included.</p>
 
-  <ul>
+  <ul class="grid">
     <li>
-      <a class="card" href="/keepsake-atelier/">
+      <div class="card">
         <h2>Keepsake Atelier</h2>
-        <p>Rip, author, verify and burn Blu-ray and DVD discs with native tooling. AACS key recovery, UDF 2.50 images, authored BD-J menus, 1:1 clones, and an MCP server for agents.</p>
-        <span class="tag">macOS · Linux · Windows</span>
-      </a>
+        <p class="what">Rip, author, verify and burn Blu-ray and DVD discs, with the tooling in the app instead of behind a licence server.</p>
+        <ul class="feat">
+          <li>Native AACS key recovery, UDF 2.50 images and 1:1 clones</li>
+          <li>Authored BD-J menus, playlists and chapter marks</li>
+          <li>Verify before you burn, then burn at the right speed</li>
+          <li>MCP server, so an agent can drive a rip or a build</li>
+        </ul>
+        <p class="meta">Rust · Tauri 2 · MIT · macOS, Linux, Windows</p>
+        <p class="links"><a href="/keepsake-atelier/">Website</a> <a href="https://github.com/ghostyshell/keepsake-atelier">Source</a></p>
+      </div>
     </li>
+
     <li>
-      <a class="card" href="/GODSend-360/">
+      <div class="card">
         <h2>GODsend 360</h2>
-        <p>An Xbox 360 game manager for Aurora consoles: browse Minerva Archive and Internet Archive, convert ISO to GOD on the fly, push DLC, title updates and save backups over FTP.</p>
-        <span class="tag">Windows · macOS · Linux</span>
-      </a>
+        <p class="what">An Xbox 360 game manager for Aurora consoles: browse a library, convert it, and push it over FTP without a laptop relay.</p>
+        <ul class="feat">
+          <li>Minerva (BitTorrent) and Internet Archive sources, searched in app</li>
+          <li>Pure-Go ISO to GOD conversion, no Windows-only tooling</li>
+          <li>DLC, title updates, save backup and restore over FTP</li>
+          <li>RXEA asset editor for Aurora art and text</li>
+        </ul>
+        <p class="meta">Go · MIT · Windows, macOS, Linux</p>
+        <p class="links"><a href="/GODSend-360/">Website</a> <a href="https://github.com/ghostyshell/GODSend-360">Source</a></p>
+      </div>
+    </li>
+
+    <li>
+      <div class="card">
+        <h2>GODsend PSP</h2>
+        <p class="what">Plug a PSP in over USB and manage the whole memory stick from one window: games, homebrew, media, saves, mods.</p>
+        <ul class="feat">
+          <li>Library built from PARAM.SFO and PBP headers, with ICON0 cover art</li>
+          <li>Bundled homebrew catalogue with per-archive layout detection</li>
+          <li>Music and video converted to PSP formats with ffmpeg</li>
+          <li>ISO and CSO images, saves and mods, one short video per tab</li>
+        </ul>
+        <p class="meta">Rust · Tauri 2 · MIT · Windows, macOS, Linux</p>
+        <p class="links"><a href="/godsend-psp/">Website</a> <a href="https://github.com/ghostyshell/godsend-psp">Source</a></p>
+      </div>
+    </li>
+
+    <li>
+      <div class="card">
+        <h2>Browser Bridge</h2>
+        <p class="what">Let a terminal agent drive the Chrome you actually use, with your profile and your logins, from a command line.</p>
+        <ul class="feat">
+          <li>Runs as an extension inside your profile, where the DevTools port is refused</li>
+          <li>Only tabs the agent opened or adopted, in their own tab group</li>
+          <li>Numbered snapshots, click, type, scroll, wait, eval, screenshot</li>
+          <li>The daemon binds 127.0.0.1 only; nothing is exposed to the network</li>
+        </ul>
+        <p class="meta">TypeScript · MIT · Chromium browsers</p>
+        <p class="links"><a href="https://github.com/ghostyshell/browser-bridge">Source</a></p>
+      </div>
+    </li>
+
+    <li>
+      <div class="card">
+        <h2>PS3 Quick Disc Decryptor</h2>
+        <p class="what">A native macOS app that decrypts Redump PS3 disc images so RPCS3 can load them.</p>
+        <ul class="feat">
+          <li>No dependencies: CommonCrypto already ships with macOS</li>
+          <li>About 1 GiB/s, so a 9 GB disc takes roughly 8 seconds</li>
+          <li>Takes a folder of .dkey files or one combined key file</li>
+          <li>Batch queue with per-file progress, and atomic .part output</li>
+        </ul>
+        <p class="meta">Swift 6 · GPL-3.0 · macOS 14+</p>
+        <p class="links"><a href="https://github.com/ghostyshell/ps3-qdd-mac">Source</a></p>
+      </div>
+    </li>
+
+    <li>
+      <div class="card">
+        <h2>stripchat-record</h2>
+        <p class="what">A headless recorder for Stripchat live streams, pinned to source resolution over WebRTC.</p>
+        <ul class="feat">
+          <li>Connects to the WebRTC edge directly and asks for the source quality</li>
+          <li>Stream only: no chat, sidebar or page UI in the file</li>
+          <li>Stops when the model goes offline, or after an optional duration</li>
+          <li>Splits into parts and remuxes each to MP4 with ffmpeg</li>
+        </ul>
+        <p class="meta">Python 3.10+ · Playwright · 18+</p>
+        <p class="links"><a href="https://github.com/ghostyshell/stripchat-record">Source</a></p>
+      </div>
     </li>
   </ul>
 
   <footer>
-    Both are MIT licensed. Source on <a href="https://github.com/ghostyshell">GitHub</a>. ·
+    Source on <a href="https://github.com/ghostyshell">GitHub</a>. ·
     <a href="/sitemap.xml">Sitemap</a> · <a href="/llms.txt">llms.txt</a>
   </footer>
 </main>
