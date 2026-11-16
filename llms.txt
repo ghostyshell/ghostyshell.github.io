@@ -34,7 +34,7 @@ Site: https://ghostyshell.github.io/
 - GODsend Switch - https://ghostyshell.github.io/godsend-switch/ - homebrew Switch
   workshop: MTP, Tinfoil and LAN installs, library with box art, sys-con virtual
   pad, NSP tools and an MCP server on loopback. Windows, macOS, Linux. MIT.
-- Browser Bridge - https://ghostyshell.github.io/browser-bridge/ - drives your real
+- Tabwing - https://ghostyshell.github.io/tabwing/ - drives your real
   Chromium profile from any CLI agent through an extension and a loopback daemon.
   TypeScript. MIT.
 - PS3 Quick Disc Decryptor - https://ghostyshell.github.io/ps3-qdd-mac/ - native
