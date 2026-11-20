@@ -58,6 +58,14 @@ All projects are free and open source.
 - Agent tooling: Browser Bridge.
 - Recorders (18+): Stripchat Recorder, Chaturbate Recorder.
 
+## Live sites
+
+- Debrid.in - https://debrid.in/ - torrent search and debrid streaming front end.
+- Streaming Addons - https://streamingaddons.com/ - a moderated directory of
+  streaming addons for Stremio and the other manifest players.
+- Game Debrid - https://game-debrid.link/ - game download links over debrid.
+- Adult Addons - https://adult-addons.click/ - the 18+ addon lists. 18+.
+
 ## Elsewhere
 
 - Discord: https://discord.gg/Z9efYy2sJg
